@@ -1,7 +1,11 @@
 #PBS -q coc-ice                     # the queue (cluster name) the job is submitted to
-#PBS -l nodes=2:ppn=24              # resource allocated: 1 note 24 processors
-     				    # The max CPU per job is 48, so I assume we can use
-				    # at most 48 processors?
+#PBS -l nodes=3:ppn=24              # resource allocated: 1 note 24 processors
+     				    # per node, 24 processors are available.
+				    # When we want to use more than 24 processors, we can
+				    # request more than 1 node. Here, since we want to use
+				    # up to 64 processors, we requested 3 nodes
+				    # (up to 24*3 = 72 processors are available)
+				    
 #PBS -l walltime=01:00:00           # job will run at most 1 hour (hh:mm:ss)
 
 cd $PBS_O_WORKDIR		# $PBS_O_WORKDIR : Job's submission directory
