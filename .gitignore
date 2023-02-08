@@ -1,3 +1,10 @@
 # exclude emacs backup files
 *~
 int_calc # ignore executable file in programming assignment 1
+# ignore tex files
+*.tex
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.gz
