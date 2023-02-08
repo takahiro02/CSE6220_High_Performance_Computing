@@ -1,5 +1,3 @@
-rm *.o int_calc		#remove any object files and the executable (int_calc)
-mpicxx main.cpp -o int_calc -lm
 [
 {
 "Number of processors": 1,
