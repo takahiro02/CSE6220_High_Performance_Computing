@@ -1,0 +1,3 @@
+rm: cannot remove ‘*.o’: No such file or directory
+make: *** [clean] Error 1
+main.cpp(10): remark #15009: main has been targeted for automatic cpu dispatch

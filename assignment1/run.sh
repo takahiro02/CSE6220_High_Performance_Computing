@@ -7,7 +7,7 @@ make int_calc			# make a binary again
 echo "["
 
 FIRST_ITER="yes"
-for proc_num in "1" "2" "4" "8" "16" "32" "64"; do
+for proc_num in "1" "2" "4" "8" "16" "32"; do # CoC-ICE seems to test only up to 48 processors
     if [ "$FIRST_ITER" = "yes" ]
     then
 	FIRST_ITER="no"

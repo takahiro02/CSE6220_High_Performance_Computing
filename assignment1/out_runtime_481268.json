@@ -1,0 +1,33 @@
+rm *.o int_calc		#remove any object files and the executable (int_calc)
+mpicxx main.cpp -o int_calc -lm
+[
+{
+"Number of processors": 1,
+"Runtime (seconds)": 0.000794649,
+}
+,
+{
+"Number of processors": 2,
+"Runtime (seconds)": 0.000395775,
+}
+,
+{
+"Number of processors": 4,
+"Runtime (seconds)": 0.000224352,
+}
+,
+{
+"Number of processors": 8,
+"Runtime (seconds)": 0.000129223,
+}
+,
+{
+"Number of processors": 16,
+"Runtime (seconds)": 0.000125647,
+}
+,
+{
+"Number of processors": 32,
+"Runtime (seconds)": 0.0100918,
+}
+]

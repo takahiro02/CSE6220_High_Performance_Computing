@@ -1,0 +1,21 @@
+---------------------------------------
+Begin PBS Prologue Tue Feb  7 22:18:45 EST 2023
+Job ID:     481268.sched-coc-ice.pace.gatech.edu
+User ID:    tfuruya6
+Job name:   pa1.pbs
+Queue:      coc-ice
+End PBS Prologue Tue Feb  7 22:18:45 EST 2023
+---------------------------------------
+In directory /storage/home/hcocice1/tfuruya6/cse6220_High_Perf_Comp/CSE6220_High_Performance_Computing/assignment1
+---------------------------------------
+Begin PBS Epilogue Tue Feb  7 22:18:53 EST 2023
+Job ID:     481268.sched-coc-ice.pace.gatech.edu
+User ID:    tfuruya6
+Job name:   pa1.pbs
+Resources:  nodes=2:ppn=24,walltime=01:00:00,neednodes=2:ppn=24
+Rsrc Used:  cput=00:00:08,vmem=476484kb,walltime=00:00:06,mem=5988kb,energy_used=0
+Queue:      coc-ice
+Nodes:     
+atl1-1-02-010-7-r.pace.gatech.edu atl1-1-02-010-8-l.pace.gatech.edu
+End PBS Epilogue Tue Feb  7 22:18:53 EST 2023
+---------------------------------------
