@@ -55,7 +55,7 @@ int main(int argc, char *argv[]) {
     end_i = n;
 
   double local_sum{0};
-  for(int i=begin_i; i<end_i; ++i)
+  for(int i=begin_i; i<=end_i; ++i) // remember to include end_i
     local_sum += 4 / (1+pow(h*(i-0.5),2));
 
   local_sum /= n;
@@ -79,8 +79,8 @@ int main(int argc, char *argv[]) {
     // cout << "}\n";
 
     // output format for Gradescope's autograder: global_sum, runtime
-    cout << setprecision(14) << global_sum << ", " << endtime-starttime;
-    // precision 
+    cout << setprecision(13) << global_sum << ", " << endtime-starttime;
+    // precision must be correct, otherwise autograder in Gradescope sees it as an error
   }
   
   // finalize MPI
