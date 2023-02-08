@@ -67,9 +67,16 @@ int main(int argc, char *argv[]) {
   if(rank == 0)
     endtime = MPI_Wtime();
   
-  cout << "At processor " << rank << " / " << p << ", local_sum = " << local_sum << ", global_sum = " << global_sum << endl;
-  if(rank == 0)
-    cout << "The elapsed run time at processor 0 is " << endtime - starttime << " seconds" << endl;
+  //cout << "At processor " << rank << " / " << p << ", local_sum = " << local_sum << ", global_sum = " << global_sum << endl;
+  if(rank == 0){
+    //cout << "The elapsed run time at processor 0 is " << endtime - starttime << " seconds" << endl;
+
+    // output in JSON format
+    cout << "{\n";
+    cout << "\"Number of processors\": " << p << ",\n";
+    cout << "\"Runtime (seconds)\": " << endtime - starttime << ",\n";
+    cout << "}\n";
+  }
   
   // finalize MPI
   MPI_Finalize();

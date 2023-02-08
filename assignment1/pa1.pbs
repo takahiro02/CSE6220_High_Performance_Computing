@@ -1,0 +1,12 @@
+#PBS -q coc-ice                     # the queue (cluster name) the job is submitted to
+#PBS -l nodes=2:ppn=24              # resource allocated: 1 note 24 processors
+     				    # The max CPU per job is 48, so I assume we can use
+				    # at most 48 processors?
+#PBS -l walltime=01:00:00           # job will run at most 1 hour (hh:mm:ss)
+
+cd $PBS_O_WORKDIR		# $PBS_O_WORKDIR : Job's submission directory
+
+echo "In directory $PWD"
+
+RESULT_FILE="${PWD}/out_runtime_${PBS_JOBID%%.*}.json"
+(bash run.sh >> $RESULT_FILE)
