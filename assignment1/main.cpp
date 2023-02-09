@@ -48,13 +48,13 @@ int main(int argc, char *argv[]) {
   // processor i takes charge of i*ceil(n/p)+1, i*ceil(n/p)+2, ..., (i+1)*ceil(n/p)
   // where p is the number of all processors in this communicator
   // Since the last processor may have fewer elements, change the end element's index for the last processor
-  int begin_i{static_cast<int>(rank*ceil(double(n)/p))};
-  int end_i{static_cast<int>((rank+1)*ceil(double(n)/p))};
+  int begin_i{1+rank*static_cast<int>(ceil(double(n)/p))}; // index starts from 1, not 0, so add 1.
+  int end_i{(rank+1)*static_cast<int>(ceil(double(n)/p))};
   if(end_i > n)
     end_i = n;
 
   double local_sum{0};
-  for(int i=begin_i; i<end_i; ++i)
+  for(int i=begin_i; i<=end_i; ++i) // remember to include end_i
     local_sum += 4 / (1+pow(h*(i-0.5),2));
 
   local_sum /= n;
